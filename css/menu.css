@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+
+:root {
+    /* colors */
+    --main: #F9B572;
+    --second: #F2C57A;
+    --ascent: #EFC65C;
+    --bg: #F1F2E9;
+    --error: #FF7474;
+    --black: #000000;
+    --white: #ffffff;
+
+    /* font size */
+    --hero: 6.25rem;
+    --header: 2.25rem;
+    --label: 1.875rem;
+    --small-label: 1.25rem;
+    --content: 1.125rem;
+    --small-content: 1rem;
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+section {
+    min-height: 100vh;
+    background-color: var(--bg) !important;
+}
+
+.material-icon {
+    font-family: 'Material Icons';
+    color: var(--black);
+    font-size: 24px;
+}
+
+/*hamburger menu*/
+.hamburger-menu {
+    z-index: 999;
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    height: 60px;
+    width: 60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.bar,
+.bar:after,
+.bar:before {
+    width: 20px;
+    height: 3px;
+}
+
+.bar {
+    position: relative;
+    transform: translateY(0px);
+    background: var(--black);
+    transition: all 0ms 300ms;
+}
+
+.bar.animate {
+    background: var(--trans);
+}
+
+.bar:before {
+    content: "";
+    width: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 7px;
+    background: var(--black);
+    transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.bar:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 7px;
+    background: var(--black);
+    transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    width: 15px;
+}
+
+.bar.animate:after {
+    top: 0;
+    transform: rotate(45deg);
+    background: var(--black);
+    transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), width 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    width: 25px;
+}
+
+.bar.animate:before {
+    bottom: 0;
+    transform: rotate(-45deg);
+    background: var(--black);
+    transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+    width: 25px;
+}
+
+/*nav menu*/
+
+.mobile-nav.hide {
+    opacity: 0;
+    left: -100%;
+}
+
+.mobile-nav.show {
+    left: 0%;
+    opacity: 1;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    text-align: left;
+    transition: .4s ease-in-out;
+    display: flex;
+    align-items: center;
+    z-index: 9;
+}
+
+/*dropdown menu*/
+.dropdown-content {
+    display: none;
+}
+
+.show-dropdown {
+    display: block;
+}
+
+
+
+
+
+
+
+
+*::-webkit-scrollbar-track {
+
+    background-color: #F9CA8C;
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+    background-color: #b9b8b8;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #ffa600;
+    border-radius: 20px;
+
+
+}
+
+
+
+
+@media (hover: hover) {
+    .mobile-nav ul li:hover {
+        transform: translate(0);
+        box-shadow: 0 0 black;
+    }
+
+    .mobile-nav ul li:nth-child(1):hover {
+        background-color: var(--orange);
+    }
+
+    .mobile-nav ul li:nth-child(2):hover {
+        background-color: var(--green);
+    }
+
+    .mobile-nav ul li:nth-child(3):hover {
+        background-color: var(--blue);
+    }
+
+    .mobile-nav ul li:nth-child(4):hover {
+        background-color: var(--yellow);
+    }
+
+    .hamburger-menu:hover {
+        transform: translate(0);
+        box-shadow: 0 0 black;
+    }
+}
+
+/* responsive*/
+@media (max-width:800px) {
+    .hamburger-menu {
+        top: 20px;
+        left: 20px;
+    }
+
+    .mobile-nav ul li a {
+        padding: 15px 50px 15px 20px;
+        font-size: 3sem;
+    }
+
+}
+
+@media (max-width:450px) {
+
+    .hamburger-menu {
+        top: 10px;
+        left: 10px;
+        box-shadow: 0 0 black;
+        border: 0;
+        background-color: var(--trans);
+    }
+
+    .mobile-nav {
+        background-color: var(--white)
+    }
+
+    .mobile-nav ul {
+        margin-left: 20px;
+        width: 100%;
+    }
+
+    .mobile-nav ul li {
+        box-shadow: 0 0 black;
+        border: 0;
+        width: 100%;
+
+        margin-top: 0;
+    }
+
+    .mobile-nav ul li a {
+        width: 100%;
+        padding: 15px 0px;
+
+    }
+}

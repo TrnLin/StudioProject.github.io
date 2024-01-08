@@ -1,24 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url(menu.css);
 
-:root {
-    --main: #F9B572;
-    --second: #F2C57A;
-    --ascent: #EFC65C;
-    --bg: #F1F2E9;
-    --error: #FF7474;
 
-}
-
-* {
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    font-family: 'Josefin Sans', sans-serif;
-}
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+section {
+    min-height: 100vh;
+    background-color: var(--bg) !important;
 }
