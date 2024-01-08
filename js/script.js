@@ -5,6 +5,7 @@ document
     var mobileNav = document.querySelector(".mobile-nav");
     mobileNav.classList.toggle("show");
   });
+
 function openDropDown() {
   document.getElementById("myDropdown").classList.toggle("show-dropdown");
 }
@@ -12,7 +13,7 @@ function openDropDown() {
 //dropdown menu code
 window.onclick = function (event) {
   if (!event.target.matches(".dropbtn")) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
+    const dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];

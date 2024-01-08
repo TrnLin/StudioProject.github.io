@@ -9,10 +9,12 @@
     --error: #FF7474;
     --black: #000000;
     --white: #ffffff;
+    --trans-white: rgba(255,255,255, .5);
 
     /* font size */
     --hero: 6.25rem;
     --header: 2.25rem;
+    --small-header: 1.5rem;
     --label: 1.875rem;
     --small-label: 1.25rem;
     --content: 1.125rem;
@@ -127,21 +129,32 @@ section {
 }
 
 .mobile-nav.show {
-    left: 0%;
+    left: 35px;
     opacity: 1;
 }
 
 .mobile-nav {
     position: fixed;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    text-align: left;
-    transition: .4s ease-in-out;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    width: max-content;
+    height: 80vh;
+
     display: flex;
     align-items: center;
-    z-index: 9;
+    padding: 2.5rem 1.25rem;
+
+    transition: .4s ease-in-out;  
+    z-index: 1;
+
+    border-radius: 10px;
+    background-color: var(--trans-white);
+    box-shadow: 0 0 4px 4px 0px rgba(0,0,0, .5);
+    backdrop-filter: blur(20px);
 }
+
+
 
 /*dropdown menu*/
 .dropdown-content {
@@ -152,11 +165,13 @@ section {
     display: block;
 }
 
-
-
-
-
-
+.dropdown-content a {
+    
+    font-size: var(--small-header);
+    color: var(--black);
+    display: block;
+    transition: .4s ease-in-out;
+}
 
 
 *::-webkit-scrollbar-track {
