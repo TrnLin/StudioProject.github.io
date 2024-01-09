@@ -299,28 +299,3 @@ section {
     }
 }
 
-/* responsive*/
-@media only screen and (max-width: 450px) {
-    .mobile-nav {
-        background-color: var(--white);
-        width: 100%;
-        height: 100vh;
-        padding: 0;
-    }
-
-    .mobile-nav.show{
-        left: 0;
-    }
-    
-    .mobile-nav ul{
-        flex-direction: column;
-        justify-content: center;
-        align-items:flex-start;
-       
-    }
-    .mobile-nav ul li a, .dropbtn{
-        font-size: var(--header);
-        padding: 1.25rem 0;
-    }
-    
-}
