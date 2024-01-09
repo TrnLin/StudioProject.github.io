@@ -3,6 +3,7 @@
 
 
 section {
-    min-height: 100vh;
+    min-height: 100lvh;
     background-color: var(--bg) !important;
 }
+
