@@ -1,9 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 @import url(menu.css);
 
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
 
-section {
-    min-height: 100lvh;
-    background-color: var(--bg) !important;
+
+:root {
+    /* colors */
+    --main: #F9B572;
+    --second: #F2C57A;
+    --ascent: #EFC65C;
+    --bg: #F1F2E9;
+    --error: #FF7474;
+    --black: #000000;
+    --white: #ffffff;
+    --trans-white: rgba(255,255,255, .5);
+
+    /* font size */
+    --hero: 6.25rem;
+    --header: 2.25rem;
+    --small-header: 1.5rem;
+    --label: 1.875rem;
+    --small-label: 1.25rem;
+    --content: 1.125rem;
+    --small-content: 1rem;
+
 }
 
+
+.first{
+    min-height: 100lvh;
+    background-color: var(--bg);
+
+}

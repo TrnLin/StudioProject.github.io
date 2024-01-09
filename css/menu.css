@@ -42,10 +42,7 @@ a {
     text-decoration: none;
 }
 
-section {
-    min-height: 100vh;
-    background-color: var(--bg) !important;
-}
+
 
 .material-icon {
     font-family: 'Material Icons';
@@ -298,4 +295,5 @@ section {
         background-color: var(--error);
     }
 }
+
 
