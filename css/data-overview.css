@@ -39,6 +39,8 @@ section {
 /*dropdown list*/
 .custom-select {
     position: relative;
+    width: 300px;
+    padding: 0 15px;
 }
 
 .custom-select select {
@@ -69,23 +71,28 @@ section {
 /*style the items (options), including the selected item:*/
 .select-items div,
 .select-selected {
-    color: black;
-
+    color: var(--black);
+    font-size: calc(var(--small-content) *4 );
 
     border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
     cursor: pointer;
     user-select: none;
 }
 
+.select-items div{
+    font-size: var(--label);
+}
 /*style items (options):*/
 .select-items {
     position: absolute;
     background-color: white;
+    padding: 15px 15px;
+    border-radius: 10px;
     top: 100%;
     left: 0;
     right: 0;
     z-index: 99;
-    color: black;
+    color: var(--black);
 }
 
 /*hide the items when the select box is closed:*/
@@ -93,7 +100,3 @@ section {
     display: none;
 }
 
-.select-items div:hover,
-.same-as-selected {
-    background-color: rgba(0, 0, 0, 0.1);
-}
