@@ -1,8 +1,99 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 @import url(menu.css);
 
+:root {
+    /* colors */
+    --main: #F9B572;
+    --second: #F2C57A;
+    --ascent: #EFC65C;
+    --bg: #F1F2E9;
+    --error: #ff6060;
+    --black: #000000;
+    --white: #ffffff;
+    --trans-white: rgba(255, 255, 255, .5);
+
+    /* font size */
+    --hero: 6.25rem;
+    --header: 2.25rem;
+    --small-header: 1.5rem;
+    --label: 1.875rem;
+    --small-label: 1.25rem;
+    --content: 1.125rem;
+    --small-content: 1rem;
+
+}
 
 section {
     min-height: 100lvh;
-    background-color: var(--bg) !important;
+    background-color: var(--bg);
+    display: flex;
+    align-items: center;
+}
+
+.wrap {
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 100%;
+}
+
+/*dropdown list*/
+.custom-select {
+    position: relative;
+}
+
+.custom-select select {
+    display: none;
+
+}
+
+.select-selected {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+
+}
+
+.select-selected:after {
+    position: absolute;
+    content: "expand_more";
+    font-family: 'Material Icons';
+    right: 0;
+    transition: .2s;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+    transform: rotate(180deg);
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+    color: black;
+
+
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+    user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+    position: absolute;
+    background-color: white;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    color: black;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+    display: none;
+}
+
+.select-items div:hover,
+.same-as-selected {
+    background-color: rgba(0, 0, 0, 0.1);
 }
