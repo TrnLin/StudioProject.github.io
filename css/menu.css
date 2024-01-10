@@ -8,10 +8,10 @@
     --second: #F2C57A;
     --ascent: #EFC65C;
     --bg: #F1F2E9;
-    --error: #FF7474;
+    --error: #ff6060;
     --black: #000000;
     --white: #ffffff;
-    --trans-white: rgba(255,255,255, .5);
+    --trans-white: rgba(255, 255, 255, .5);
 
     /* font size */
     --hero: 6.25rem;
@@ -52,7 +52,8 @@ section {
     color: var(--black);
     font-size: 24px;
 }
-.mobile{
+
+.mobile {
     position: fixed;
     top: 30px;
     left: 30px;
@@ -62,12 +63,13 @@ section {
     z-index: 999;
 }
 
-.logo a{
+.logo a {
     font-size: 25px;
     color: var(--main);
     font-family: 'Jockey One', sans-serif;
 
 }
+
 /*hamburger menu*/
 .hamburger-menu {
     height: 45px;
@@ -136,8 +138,9 @@ section {
 /*nav menu*/
 
 .mobile-nav.hide {
-    opacity: 0;
+    opacity: 1;
     left: -100%;
+    transition: opacity .3s ease-in-out, left .2s ease-in-out;
 }
 
 .mobile-nav.show {
@@ -157,7 +160,7 @@ section {
     align-items: center;
     padding: 2.5rem 1.25rem;
 
-    transition: .4s ease-in-out;  
+    transition: .4s ease-in-out;
     z-index: 1;
 
     border-radius: 10px;
@@ -169,28 +172,30 @@ section {
 
 
 /*dropdown menu*/
-.dropdown{
+.dropdown {
     width: 100%;
 }
 
-.dropbtn{
+.dropbtn {
     gap: 50px;
 }
 
 .top-nav,
 .mobile-nav ul,
-.bottom-nav  {
+.bottom-nav {
     display: flex;
     flex-direction: column;
     gap: 0.625rem;
 }
 
-.mobile-nav ul{
+.mobile-nav ul {
     width: 100%;
-    height: 100%;;   
+    height: 100%;
+    ;
     justify-content: space-between;
 }
- .mobile-nav ul li{
+
+.mobile-nav ul li {
     display: flex;
 }
 
@@ -207,15 +212,15 @@ section {
 
 /*dropdown Menu*/
 .dropbtn,
-.bottom-nav a{
+.bottom-nav a {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     background-color: transparent;
-    border: none; 
+    border: none;
     width: 100%;
-    
+
 }
 
 .dropdown-content {
@@ -229,10 +234,10 @@ section {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    width: 100%;  
+    width: 100%;
 }
 
-.dropdown .material-icon{
+.dropdown .material-icon {
     transition: .2s ease-in-out;
 }
 
@@ -240,7 +245,7 @@ section {
     transform: rotate(180deg);
 }
 
-.dropdown-content a {  
+.dropdown-content a {
     font-size: var(--content) !important;
     display: block;
     transition: .3s ease-in-out;
@@ -248,11 +253,11 @@ section {
 
 /*bottom section */
 
-.bottom-nav a{
-    padding: 10px 15px;  
+.bottom-nav a {
+    padding: 10px 15px;
 }
 
-.bottom-nav .material-icon{
+.bottom-nav .material-icon {
     font-size: 2rem;
 }
 
@@ -275,27 +280,74 @@ section {
 
 
 @media (hover: hover) {
+
     ul li a:hover,
     .bottom-nav li a:hover span {
         color: var(--white);
     }
-    .top-nav li:nth-child(1) a:hover{
+
+    .top-nav li:nth-child(1) a:hover {
         background-color: var(--main);
     }
-    .top-nav li:nth-child(2) a:hover{
+
+    .top-nav li:nth-child(2) a:hover {
         background-color: var(--second);
     }
-    .dropdown-content a:nth-child(1):hover{
+
+    .dropdown-content a:nth-child(1):hover {
         background-color: var(--ascent);
     }
-    .dropdown-content a:nth-child(2):hover{
+
+    .dropdown-content a:nth-child(2):hover {
         background-color: var(--second);
     }
-    .bottom-nav li:nth-child(1) a:hover{
+
+    .bottom-nav li:nth-child(1) a:hover {
         background-color: var(--ascent);
     }
-    .bottom-nav li:nth-child(2) a:hover{
+
+    .bottom-nav li:nth-child(2) a:hover {
         background-color: var(--error);
     }
 }
 
+@media screen and (max-width: 450px) {
+    .mobile {
+        top: 20px;
+        left: 20px;
+        gap: 00px;
+
+    }
+
+    .logo {
+        position: fixed;
+        right: 50%;
+        transform: translate(50%, 0);
+    }
+
+    .mobile-nav {
+
+        width: 100%;
+        height: 100vh;
+
+        padding: 5.5rem 1.25rem 2.5rem 1.25rem;
+
+        transition: .4s ease-in-out;
+        z-index: 1;
+
+        border-radius: 0px;
+        background-color: var(--trans-white);
+        box-shadow: 0 0 black;
+        backdrop-filter: blur(20px);
+    }
+
+    .mobile-nav.show {
+        left: 0;
+    }
+
+    .mobile-nav ul li a,
+    .dropbtn {
+        font-size: calc(var(--header) - .25rem);
+        padding: 15px 15px;
+    }
+}
