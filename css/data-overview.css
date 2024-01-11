@@ -30,15 +30,27 @@
 
 section {
     min-height: 100lvh;
-    background-color: var(--bg);
-    display: flex;
-    align-items: center;
 }
 
+.first{
+    background: url(../img/background-folder/background.png) var(--bg) no-repeat ;
+    background-size: contain;
+    background-position: bottom ;
+    
+    display: flex;
+    align-items: center;
+
+
+}
 .wrap {
     margin: 0 auto;
     padding: 0 40px;
     width: 100%;
+    
+    
+}
+.first .wrap{
+    margin-bottom: 10%;
 }
 
 /*dropdown list*/
