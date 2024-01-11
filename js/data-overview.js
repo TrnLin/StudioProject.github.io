@@ -80,4 +80,116 @@ function closeAllSelect(elmnt) {
 }
 /*if the user clicks anywhere outside the select box,
       then close all select boxes:*/
+
 document.addEventListener("click", closeAllSelect);
+
+//chart
+const ctx = document.getElementById("population");
+
+new Chart(ctx, {
+  type: "bar",
+  data: {
+    labels: [
+      "1991",
+      "1992",
+      "1993",
+      "1994",
+      "1995",
+      "1996",
+      "1997",
+      "1998",
+      "1999",
+      "2001",
+      "2002",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+    ],
+    datasets: [
+      {
+        label: "",
+        data: [
+          20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 150, 160, 170,
+          180,
+        ],
+        borderWidth: 1,
+        backgroundColor: "#F9B572",
+        borderColor: "#F9B572",
+      },
+    ],
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true,
+      },
+      x: {
+        grid: {
+          display: false,
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+    maintainAspectRatio: false,
+  },
+});
+
+const ctx2 = document.getElementById("temperature");
+
+new Chart(ctx2, {
+  type: "line",
+  data: {
+    labels: [
+      "1991",
+      "1992",
+      "1993",
+      "1994",
+      "1995",
+      "1996",
+      "1997",
+      "1998",
+      "1999",
+      "2001",
+      "2002",
+      "2003",
+      "2004",
+      "2005",
+      "2006",
+      "2007",
+    ],
+    datasets: [
+      {
+        label: "",
+        data: [
+          20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 150, 160, 170,
+          180,
+        ],
+        borderWidth: 1,
+        backgroundColor: "#F9B572",
+        borderColor: "#F9B572",
+      },
+    ],
+  },
+  options: {
+    scales: {
+      y: {
+        beginAtZero: true,
+        grid: {
+          display: false,
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+    maintainAspectRatio: false,
+  },
+});

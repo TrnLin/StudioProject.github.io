@@ -57,6 +57,7 @@
 
     <section class="first">
       <div class="wrap">
+        <!--World/Country option-->
         <div class="custom-select">
           <select>
             <option value="0">World</option>
@@ -64,15 +65,103 @@
             <option value="2">Country</option>
           </select>
         </div>
+
+        <!--Search bar-->
         <div class="search-bar">
-          <div class="input-name"></div>
-          <input type="text" id="starting-yearx" />
+          <div class="year-input-container">
+            <div class="input-name">Start Year</div>
+            <input
+              type="text"
+              id="starting-year-input"
+              class="input-box"
+              placeholder="User Input"
+            />
+          </div>
+          <div class="year-input-container">
+            <div class="input-name">End Year</div>
+
+            <input
+              type="text"
+              id="ending-year-input"
+              class="input-box"
+              placeholder="User Input"
+              onkeyup="similarYear()"
+            />
+          </div>
         </div>
-        <div class="input-box"></div>
-        <div class="input-name"></div>
-        <input type="text" id="ending-year" class="input-box" />
+
+        <!--Data diagram-->
+        <div class="dashboard">
+          <div class="info-box">
+            <div class="box-container">
+              <div id="region-name" class="title">World</div>
+              <div class="content-container">
+                <div class="container">
+                  <div class="label">Country</div>
+                  <span id="availabel-countries" class="content">207</span>
+                </div>
+                <div class="container">
+                  <div class="label">Country Code</div>
+                  <span id="country-code" class="content">WLD</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="box-container">
+              <div id="starting-year" class="title">1910</div>
+              <div class="content-container">
+                <div class="container">
+                  <div class="label">Population</div>
+                  <span id="starting-year-population" class="content"
+                    >5.293.517.142</span
+                  >
+                </div>
+                <div class="container">
+                  <div class="label">Temperature</div>
+                  <span id="starting-year-temperature" class="content"
+                    >9.234°C</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="box-container">
+              <div id="ending-year" class="title">2015</div>
+              <div class="content-container">
+                <div class="container">
+                  <div class="label">Population</div>
+                  <span id="ending-year-population" class="content"
+                    >5.293.517.142</span
+                  >
+                </div>
+                <div class="container">
+                  <div class="label">Temperature</div>
+                  <span id="ending-year-temperature" class="content"
+                    >9.234°C</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="table-container">
+            <div class="title">Population</div>
+            <div class="graph">
+              <canvas id="population"></canvas>
+            </div>
+          </div>
+          <div class="table-container">
+            <div class="title">Temper</div>
+            <div class="graph">
+              <canvas id="temperature"></canvas>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+    <section></section>
+    <section></section>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
     <script src="../js/script.js"></script>
     <script src="../js/data-overview.js"></script>
   </body>
