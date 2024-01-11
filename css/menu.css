@@ -287,6 +287,14 @@ a {
 .social-linked, .linked{
     color: var(--white);
     font-size: var(--content);
+    transition: .2s ease-in-out;
+}
+.social-linked{
+    font-size: 30px;
+
+}
+.social-linked:hover, .linked:hover{
+    color: var(--black);
 }
 
 /*scrollbar*/
