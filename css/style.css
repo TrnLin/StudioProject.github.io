@@ -233,7 +233,7 @@ section .button {
     gap: 15px;
     position: relative;
     z-index: 1;
-    left: -600px;
+    left: -800px;
 
 }
 

@@ -39,7 +39,6 @@ let contributeRight = gsap.timeline({
     trigger: ".right",
     start: "-20% center",
     end: "50% center",
-
     scrub: true,
     markers: false,
   },
@@ -48,10 +47,8 @@ let contributeRight = gsap.timeline({
 let contributeLeft = gsap.timeline({
   scrollTrigger: {
     trigger: ".left",
-
     start: "-20% center",
     end: "50% center",
-
     scrub: true,
     markers: false,
   },
@@ -82,7 +79,7 @@ heroSub.to(".hero-sub", {
 });
 
 contributeLeft.to(".left", {
-  x: 600,
+  x: 800,
 });
 
 contributeRight.to(".right", {
