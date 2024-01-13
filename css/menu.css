@@ -33,6 +33,12 @@
     text-decoration: none;
     list-style: none;
     font-family: 'Josefin Sans', sans-serif;
+
+
+}
+
+*:not(.header .mobile .hamburger-menu .bar) {
+    overflow-x: hidden;
 }
 
 *,
@@ -40,6 +46,8 @@
 *::after {
     box-sizing: border-box;
 }
+
+
 
 a {
     text-decoration: none;
@@ -59,6 +67,11 @@ a {
     align-items: center;
     gap: 20px;
     z-index: 999;
+    overflow-x: auto;
+}
+
+.logo {
+    height: min-content;
 }
 
 .logo a {
@@ -138,20 +151,20 @@ a {
 .mobile-nav.hide {
     opacity: 0;
     left: -100%;
-    
+
 }
 
 .mobile-nav.show {
     left: 35px;
     opacity: 1;
-    
+
 }
 
 .mobile-nav {
-    position:fixed;
+    position: fixed;
     top: 50%;
     transform: translate(0, -50%);
-    
+
 
     width: max-content;
     height: 80vh;
@@ -167,11 +180,12 @@ a {
     background-color: var(--trans-white);
     box-shadow: var(--box-shadow);
     backdrop-filter: blur(10px);
+    z-index: 999;
 }
 
 
 
-/*Dropdown Menu*/
+/*dropdown menu*/
 .dropdown {
     width: 100%;
 }
@@ -209,6 +223,7 @@ a {
     border-radius: 5px;
 }
 
+/*dropdown Menu*/
 
 .dropbtn,
 .bottom-nav a {
@@ -260,41 +275,47 @@ a {
     font-size: 2rem;
 }
 
-/*footer*/
-.footer{
+
+.footer {
     width: 100%;
     height: calc(0.35 * 100vh);
     background-color: var(--main);
     display: flex;
     align-items: center;
 }
-.footer .wrap{
+
+.footer .wrap {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
 }
-.footer-section-container{
+
+.footer-section-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    
+
 }
 
-.small-header{
+.small-header {
     font-size: var(--header);
     color: var(--white);
 }
 
-.social-linked, .linked{
+.social-linked,
+.linked {
     color: var(--white);
     font-size: var(--content);
     transition: .2s ease-in-out;
 }
-.social-linked{
+
+.social-linked {
     font-size: 30px;
 
 }
-.social-linked:hover, .linked:hover{
+
+.social-linked:hover,
+.linked:hover {
     color: var(--black);
 }
 
@@ -313,7 +334,7 @@ a {
     border-radius: 20px;
 }
 
-/*If hover = true*/
+
 @media (hover: hover) {
 
     ul li a:hover,
@@ -346,8 +367,6 @@ a {
     }
 }
 
-
-/*Responsive*/
 @media screen and (max-width: 450px) {
     .mobile {
         top: 20px;
