@@ -28,6 +28,10 @@
 
 }
 
+* {
+    overflow: initial !important;
+}
+
 section {
     min-height: 100lvh;
 }
@@ -208,6 +212,19 @@ section {
     gap: 10px
 }
 
+.title {
+    font-size: var(--header);
+}
+
+.label {
+    font-size: var(--small-label);
+}
+
+.content {
+    font-size: var(--content);
+}
+
+/*graph*/
 .title {
     font-size: var(--header);
 }
