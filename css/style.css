@@ -52,7 +52,6 @@ section .wrap {
 .cloud-1,
 .cloud-2 {
     position: absolute;
-
     height: auto;
 
 }
@@ -106,8 +105,8 @@ section .wrap {
     -webkit-backdrop-filter: invert(1);
     backdrop-filter: invert(1);
     z-index: 3;
-    width: calc(43.5vw + 0.1px);
-    height: calc(43.5vw + 0.1px);
+    width: calc(43.5vw - 0.0001px);
+    height: calc(43.5vw - 0.0001px);
 
 }
 
@@ -186,6 +185,15 @@ section .button {
     background-attachment: scroll;
 }
 
+.about-container {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    position: relative;
+    left: -800px;
+    opacity: 0;
+}
+
 .about .wrap {
     position: relative;
     display: flex;
@@ -198,7 +206,7 @@ section .button {
 
 .about-content {
     width: 45%;
-    text-align: justify;
+    text-align: left;
 }
 
 .about .header span {
@@ -225,6 +233,7 @@ section .button {
     gap: 15px;
     position: relative;
     z-index: 1;
+    left: -600px;
 
 }
 
@@ -238,6 +247,7 @@ section .button {
     justify-content: center;
     position: relative;
     z-index: 1;
+    right: -800px;
 }
 
 
@@ -247,6 +257,16 @@ section .button {
     background: url(../img/background-folder/background.png) var(--bg) no-repeat;
     background-size: contain;
     background-position: bottom;
+}
+
+.fourth-container {
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    opacity: 0;
+
 }
 
 .data-analytic-page .wrap {
