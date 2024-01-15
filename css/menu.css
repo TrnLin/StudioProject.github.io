@@ -37,9 +37,6 @@
 
 }
 
-*:not(.bar) {
-    overflow: hidden;
-}
 
 *,
 *::before,
@@ -51,6 +48,10 @@
 
 a {
     text-decoration: none;
+}
+
+*:not(.bar) {
+    overflow: hidden;
 }
 
 .material-icon {

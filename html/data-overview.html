@@ -11,11 +11,11 @@
     <title>Project Studio</title>
   </head>
   <body>
-    <div class="header">
+    <nav class="header">
       <div class="mobile">
         <div class="hamburger-menu"><div class="bar"></div></div>
         <div class="logo">
-          <a href="*">Project Studio</a>
+          <a href="../index.html">Project Studio</a>
         </div>
       </div>
       <div class="mobile-nav hide">
@@ -30,7 +30,7 @@
                   <span class="material-icon">expand_more</span>
                 </span>
                 <div class="dropdown-content">
-                  <a href="#">Data Overview</a>
+                  <a href="data-overview.html">Data Overview</a>
                   <a href="#">Advance Data Analyst</a>
                 </div>
               </div>
@@ -53,45 +53,62 @@
           </div>
         </ul>
       </div>
-    </div>
+    </nav>
 
     <section class="first">
       <div class="wrap">
         <!--World/Country option-->
         <div class="custom-select">
           <select>
-            <option value="0">World</option>
-            <option value="1">World</option>
-            <option value="2">Country</option>
+            <option value="World">World</option>
+            <option value="World">World</option>
+            <option value="Country">Country</option>
           </select>
         </div>
 
         <!--Search bar-->
-        <div class="search-bar">
-          <div class="year-input-container">
-            <div class="input-name">Start Year</div>
-            <input
-              type="text"
-              id="starting-year-input"
-              class="input-box"
-              placeholder="User Input"
-            />
+        <form class="search-bar" action="/World" method="post">
+          <div class="input-container">
+            <div class="year-input-container">
+              <div class="input-name">Country Name</div>
+              <input
+                type="text"
+                id="country-input"
+                class="input-box"
+                placeholder="User Input"
+              />
+            </div>
+            <div class="year-input-container">
+              <div class="input-name">Start Year</div>
+              <input
+                type="text"
+                id="starting-year-input"
+                class="input-box"
+                placeholder="User Input"
+              />
+            </div>
+            <div class="year-input-container">
+              <div class="input-name">End Year</div>
+  
+              <input
+                type="text"
+                id="ending-year-input"
+                class="input-box"
+                placeholder="User Input"
+                onkeyup="similarYear()"
+              />
+            </div>
           </div>
-          <div class="year-input-container">
-            <div class="input-name">End Year</div>
-
-            <input
-              type="text"
-              id="ending-year-input"
-              class="input-box"
-              placeholder="User Input"
-              onkeyup="similarYear()"
-            />
+          <div class="submit-reset-btn-container">
+            <button class="button" id="submit">Submit</button>
+            <button class="button" id="reset">Reset</button>
           </div>
-        </div>
+          
+        </form>
 
         <!--Data diagram-->
         <div class="dashboard">
+          <div class="dashboard-first-row">
           <div class="info-box">
             <div class="box-container">
               <div id="region-name" class="title">World</div>
@@ -143,6 +160,8 @@
               </div>
             </div>
           </div>
+
+          <!--Graph-->
           <div class="table-container">
             <div class="title">Population</div>
             <div class="graph">
@@ -150,15 +169,203 @@
             </div>
           </div>
           <div class="table-container">
-            <div class="title">Temper</div>
+            <div class="title">Temperature</div>
             <div class="graph">
               <canvas id="temperature"></canvas>
             </div>
           </div>
+
+        
         </div>
+        <div class="dashboard-second-row">
+          <div class="add-info-container">
+            <div class="title">Additional Info</div>
+            <div class="change-container">
+              <div class="label">Temperature Change:</div>
+              <div class="change-content content" id="temp-change">1.234°C<span class="percentage" id="temp-change-percentage">(1.4%)</span></div>
+            </div>
+            <div class="change-container">
+              <div class="label">Population Change</div>
+              <div class="change-content content" id="popu-change">1.234.456.789<span class="percentage" id="popu-change-percent">(10%)</span></div>
+            </div>
+            <div class="change-container">
+              <div class="label">Time period</div>
+              <div class="change-content content">20 years</div>
+            </div>
+            <div class="change-container">
+              <div class="location-wrap">
+                <div class="latitude-container">
+                  <div class="label">Latitude</div>
+                  <div class="content" id="latidude">40.99N</div>
+                </div>
+                <div class="longitude-container">
+                  <div class="label">Longitude</div>
+                  <div class="content" id="longitude">19.17E</div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+
+          <!--Country Only-->
+          <!--Available Country-->
+          <div class="avai-container">
+            <div class="title">Countries</div>
+            <div class="dropdown-container">
+              <div class="custom-select order">
+                <select>
+                  <option value="asc">Ascending</option>
+                  <option value="asc">Ascending</option>
+                  <option value="dsc">Descending</option>
+                </select>
+              </div>
+  
+              <div class="custom-select popu-temp">
+                <select>
+                  <option value="popu">Population</option>
+                  <option value="popu">Population</option>
+                  <option value="temp">Temperature</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="list-container">
+              <table id="available-country" >
+              
+                <tr>
+                  <td>Vietnam</td>
+                  <td>9.703°C</td>
+                  <td>1.234.456.789</td>
+                </tr>
+                <tr>
+                  <td>Vietnam</td>
+                  <td>9.703°C</td>
+                  <td>1.234.456.789</td>
+                </tr>
+                <tr>
+                  <td>Vietnam</td>
+                  <td>9.703°C</td>
+                  <td>1.234.456.789</td>
+                </tr>
+                <tr>
+                  <td>Vietnam</td>
+                  <td>9.703°C</td>
+                  <td>1.234.456.789</td>
+                </tr>
+                <tr>
+                  <td>Vietnam</td>
+                  <td>9.703°C</td>
+                  <td>1.234.456.789</td>
+                </tr>
+                <tr>
+                  <td>Vietnam</td>
+                  <td>9.703°C</td>
+                  <td>1.234.456.789</td>
+                </tr>
+                <tr>
+                  <td>Vietnam</td>
+                  <td>9.703°C</td>
+                  <td>1.234.456.789</td>
+                </tr>
+                <tr>
+                  <td>Vietnam</td>
+                  <td>9.703°C</td>
+                  <td>1.234.456.789</td>
+                </tr>
+                <tr>
+                  <td>Vietnam</td>
+                  <td>9.703°C</td>
+                  <td>1.234.456.789</td>
+                </tr>
+                <tr>
+                  <td>Vietnam</td>
+                  <td>9.703°C</td>
+                  <td>1.234.456.789</td>
+                </tr>
+                <tr>
+                  <td>Vietnam</td>
+                  <td>9.703°C</td>
+                  <td>1.234.456.789</td>
+                  <tr>
+                    <td>Vietnam</td>
+                    <td>9.703°C</td>
+                    <td>1.234.456.789</td>
+                  </tr>
+                  <tr>
+                    <td>Vietnam</td>
+                    <td>9.703°C</td>
+                    <td>1.234.456.789</td>
+                  </tr><tr>
+                    <td>Vietnam</td>
+                    <td>9.703°C</td>
+                    <td>1.234.456.789</td>
+                  </tr>
+                  <tr>
+                    <td>Vietnam</td>
+                    <td>9.703°C</td>
+                    <td>1.234.456.789</td>
+                  </tr>
+                  <tr>
+                    <td>Vietnam</td>
+                    <td>9.703°C</td>
+                    <td>1.234.456.789</td>
+                  </tr>
+                  <tr>
+                    <td>Vietnam</td>
+                    <td>9.703°C</td>
+                    <td>1.234.456.789</td>
+                    <tr>
+                      <td>Vietnam</td>
+                      <td>9.703°C</td>
+                      <td>1.234.456.789</td>
+                    </tr>
+                    <tr>
+                      <td>Vietnam</td>
+                      <td>9.703°C</td>
+                      <td>1.234.456.789</td>
+                    </tr><tr>
+                      <td>Vietnam</td>
+                      <td>9.703°C</td>
+                      <td>1.234.456.789</td>
+                    </tr>
+                    <tr>
+                      <td>Vietnam</td>
+                      <td>9.703°C</td>
+                      <td>1.234.456.789</td>
+                    </tr>
+                    <tr>
+                      <td>Vietnam</td>
+                      <td>9.703°C</td>
+                      <td>1.234.456.789</td>
+                    </tr>
+                    <tr>
+                      <td>Vietnam</td>
+                      <td>9.703°C</td>
+                      <td>1.234.456.789</td>
+                      <tr>
+                        <td>Vietnam</td>
+                        <td>9.703°C</td>
+                        <td>1.234.456.789</td>
+                      </tr>
+                      <tr>
+                        <td>Vietnam</td>
+                        <td>9.703°C</td>
+                        <td>1.234.456.789</td>
+                      </tr>
+
+                
+              </table>
+            </div>
+            
+          </div>
+        </div>
+       
+        </div>
+        
       </div>
     </section>
-    <div class="footer">
+    <footer class="footer">
       <div class="wrap">
         <div class="footer-section-container">
           <div class="small-header">About</div>
@@ -190,7 +397,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>

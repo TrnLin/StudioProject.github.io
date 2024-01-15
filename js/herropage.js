@@ -58,7 +58,7 @@ let contributeLeft = gsap.timeline({
 let dataAnalytics = gsap.timeline({
   scrollTrigger: {
     trigger: ".fourth-container",
-    start: "-40% center",
+    start: "-80% center",
     end: "50% center",
     scrub: true,
     markers: false,
