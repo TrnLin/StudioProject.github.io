@@ -193,3 +193,29 @@ new Chart(ctx2, {
     maintainAspectRatio: false,
   },
 });
+
+//Country-World
+
+document
+  .getElementsByClassName("select-selected")[0]
+  .setAttribute("onclick", "change()");
+
+function change() {
+  var worldCountryOption = document.getElementById(
+    "world-country-option"
+  ).value;
+
+  const countryInput = document.querySelector(".country-name-input");
+  const stateCityCard = document.querySelector(".city-state-container");
+  const availCountry = document.querySelector(".avai-container");
+
+  if (worldCountryOption == "world") {
+    countryInput.style.display = "none";
+    stateCityCard.style.display = "none";
+    availCountry.style.display = "none";
+  } else {
+    countryInput.style.display = "flex";
+    stateCityCard.style.display = "flex";
+    availCountry.style.display = "flex";
+  }
+}

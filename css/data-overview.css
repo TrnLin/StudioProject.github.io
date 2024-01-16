@@ -399,7 +399,7 @@ table {
 }
 
 #state-city-ranking th:nth-child(1) {
-    padding: 0px 3.5vw 0px 0px;
+    padding: 0px 5vw 0px 0px;
 
 }
 
@@ -416,6 +416,12 @@ table {
 #state-city-ranking td:nth-child(even) {
     text-align: right;
 
+}
+
+/*World option trigger*/
+.country-name-input,
+.city-state-container {
+    display: none;
 }
 
 @media (hover: hover) {

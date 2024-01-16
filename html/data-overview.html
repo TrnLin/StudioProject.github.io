@@ -59,9 +59,9 @@
       <div class="wrap">
         <!--World/Country option-->
         <div class="custom-select">
-          <select>
-            <option value="World">World</option>
-            <option value="World">World</option>
+          <select id="world-country-option">
+            <option value="world" >World</option>    
+            <option value="world" >World</option>
             <option value="Country">Country</option>
           </select>
         </div>
@@ -69,7 +69,7 @@
         <!--Search bar-->
         <form class="search-bar" action="/World" method="post">
           <div class="input-container">
-            <div class="year-input-container">
+            <div class="year-input-container country-name-input">
               <div class="input-name">Country Name</div>
               <input
                 type="text"
@@ -2412,6 +2412,7 @@
         
       </div>
     </section>
+    
     <footer class="footer">
       <div class="wrap">
         <div class="footer-section-container">
@@ -2458,5 +2459,6 @@
     ></script>
     <script src="../js/script.js"></script>
     <script src="../js/data-overview.js"></script>
+    
   </body>
 </html>
