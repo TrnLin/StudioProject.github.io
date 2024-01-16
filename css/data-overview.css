@@ -420,7 +420,8 @@ table {
 
 /*World option trigger*/
 .country-name-input,
-.city-state-container {
+.city-state-container,
+.avai-container {
     display: none;
 }
 
