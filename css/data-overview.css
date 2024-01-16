@@ -228,7 +228,8 @@ section {
 .box-container,
 .table-container,
 .avai-container,
-.add-info-container {
+.add-info-container,
+.city-state-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -299,7 +300,8 @@ section {
 }
 
 .order,
-.popu-temp {
+.popu-temp,
+.min-max-average {
     font-size: var(--small-content);
     border-radius: 5px;
     transition: .3s;
@@ -315,7 +317,7 @@ section {
 }
 
 .avai-container .custom-select .select-selected {
-    padding: 10px 30px 10px 0px;
+    padding: 0px 30px 0px 0px;
 }
 
 .list-container {
@@ -325,9 +327,17 @@ section {
 }
 
 table {
-    height: 40%;
     border-collapse: collapse;
 
+}
+
+#available-country th:nth-child(1),
+#available-country th:nth-child(2) {
+    text-align: left;
+}
+
+#available-country th:nth-child(3) {
+    text-align: center;
 }
 
 
@@ -361,6 +371,51 @@ table {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+
+/*City and State*/
+.city-state-container {
+    width: max-content;
+    height: 400px;
+}
+
+.city-state-container .select-selected {
+    font-size: var(--header);
+    padding: 0px 30px 0px 0px;
+}
+
+.city-state-container .dropdown-container .select-selected {
+    font-size: var(--small-content);
+    padding: 0px 30px 0px 0px;
+}
+
+
+.city-state-container .select-selected:after {
+    right: calc(0px - 10px);
+}
+
+.city-state-container .dropdown-container .select-selected:after {
+    right: calc(0px);
+}
+
+#state-city-ranking th:nth-child(1) {
+    padding: 0px 3.5vw 0px 0px;
+
+}
+
+#state-city-ranking th:nth-child(2),
+#state-city-ranking td:nth-child(even) {
+    padding: 0px 20px 0px 0px;
+
+}
+
+#state-city-ranking tr {
+    height: 20px;
+}
+
+#state-city-ranking td:nth-child(even) {
+    text-align: right;
+
 }
 
 @media (hover: hover) {
