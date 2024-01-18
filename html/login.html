@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="../css/login.css" />
+    <title>Login Page</title>
+  </head>
+  <body>
+    <nav class="header">
+      <div class="mobile">
+        <div class="hamburger-menu"><div class="bar"></div></div>
+        <div class="logo">
+          <a href="../index.html">Project Studio</a>
+        </div>
+      </div>
+      <div class="mobile-nav hide">
+        <ul>
+          <div class="top-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="*">About</a></li>
+            <li><a href="*">Contribute</a></li>
+            <li>
+              <div class="dropdown">
+                <span class="dropbtn">
+                  Data Analytics
+                  <span class="material-icon">expand_more</span>
+                </span>
+                <div class="dropdown-content">
+                  <a href="data-overview.html">Data Overview</a>
+                  <a href="advance-data-overview.html">Advance Data Analyst</a>
+                </div>
+              </div>
+            </li>
+          </div>
+
+          <div class="bottom-nav">
+            <li>
+              <a href="*"
+                ><span>Trn H.Linh</span>
+                <span class="material-icon">person</span>
+              </a>
+            </li>
+            <li>
+              <a href="*"
+                ><span>Setting</span>
+                <span class="material-icon">settings</span></a
+              >
+            </li>
+          </div>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="circle">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="100vh"
+        height="100vh"
+      >
+        <filter id="n" x="0" y="0">
+          <feTurbulence
+            type="fractalNoise"
+            baseFrequency="1"
+            stitchTiles="stitch"
+          />
+        </filter>
+        <rect width="100vh" height="100vh" fill="rgba(255, 255, 255, 0.1)" />
+        <rect width="100vh" height="100vh" filter="url(#n)" opacity="0.10" />
+      </svg>
+    </div>
+    <section class="first">
+      <div class="wrap">
+        <div class="login-card">
+          <div class="header-container">
+            <div class="header">Login</div>
+            <div class="header-content">
+              Welcome back! Please login to access your account.
+            </div>
+          </div>
+
+          <div class="input-container">
+            <div class="sub-input-container">
+              <div class="label">Email/Username</div>
+              <input
+                type="text"
+                class="input-box"
+                placeholder="Enter your Email/Username"
+              />
+            </div>
+            <div class="sub-input-container">
+              <div class="label">Password</div>
+              <input
+                type="text"
+                class="input-box"
+                placeholder="Enter your Password"
+              />
+            </div>
+          </div>
+
+          <div class="button-container">
+            <button class="login label">Login</button>
+            <div class="content">Or</div>
+            <a href="sign-up.html" class="signUp label">Register an Account</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../js/script.js"></script>
+  </body>
+</html>

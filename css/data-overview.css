@@ -116,7 +116,8 @@ section {
     right: 0;
 
     position: absolute;
-    background-color: var(--white);
+    background-color: var(--trans-white);
+    backdrop-filter: blur(10px);
     padding: 15px 15px;
     border-radius: 10px;
 
@@ -127,6 +128,10 @@ section {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.select-items div:hover {
+    color: var(--main)
 }
 
 /*hide the items when the select box is closed:*/
@@ -239,6 +244,7 @@ section {
     height: auto;
 
     background-color: var(--white);
+
     box-shadow: var(--box-shadow);
     border-radius: 5px;
     color: var(--black);

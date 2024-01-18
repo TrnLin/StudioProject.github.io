@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url(menu.css);
+
+:root {
+    /* colors */
+    --main: #F9B572;
+    --second: #F2C57A;
+    --ascent: #EFC65C;
+    --bg: #F1F2E9;
+    --error: #ff6060;
+    --black: #000000;
+    --white: #ffffff;
+    --trans-white: rgba(255, 255, 255, .8);
+
+
+    /*additional*. */
+    --box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+
+
+    /* font size */
+    --hero: 6.25rem;
+    --header: 2.25rem;
+    --small-header: 1.5rem;
+    --label: 1.875rem;
+    --small-label: 1.25rem;
+    --content: 1.125rem;
+    --small-content: 1rem;
+
+}
+
+
+
+*:not(canvas) {
+    overflow: initial !important;
+}
+
+
+section {
+    min-height: 100lvh;
+    background-color: var(--bg);
+}
+
+.first {
+    background: url(../img/background-folder/background.png) var(--bg) no-repeat;
+    background-size: contain;
+    background-position: bottom;
+
+    display: flex;
+    align-items: center;
+
+
+}
+
+.wrap {
+    margin: 0 auto;
+    padding: 0 40px;
+    width: 100%;
+
+
+}
+
+.first .wrap {}
+
+/*Search bar*/
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px;
+    background: var(--white);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+
+.input-container {
+    display: flex;
+    gap: 65px;
+}
+
+.year-input-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+
+}
+
+.submit-reset-btn-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.button {
+    font-size: var(--content);
+    color: var(--white);
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: max-content;
+    background-color: var(--main);
+    transition: .2s ease-in-out;
+    border: none;
+}
+
+#reset {
+    background: var(--error);
+}
+
+.input-name {
+    font-size: var(--small-label);
+    color: var(--black);
+}
+
+.input-box::placeholder {
+    font-size: var(--small-content);
+}
+
+.input-box {
+    padding: 10px 15px;
+    border: 2px solid var(--black);
+    border-radius: 4px;
+    width: 175px;
+    transition: .2s;
+}
+
+.input-box:focus {
+    border-color: var(--main);
+}
+
+
+/*dropdown list*/
+.custom-select {
+    position: relative;
+    width: max-content;
+    padding: 0 15px;
+}
+
+.custom-select select {
+    display: none;
+
+}
+
+.select-selected {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 10px 30px;
+}
+
+.select-selected:after {
+    position: absolute;
+    content: "expand_more";
+    font-family: 'Material Icons';
+    right: calc(0px + 15px);
+    transition: .2s;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+    transform: rotate(180deg);
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,
+.select-selected {
+    color: var(--black);
+    font-size: calc(var(--content));
+    cursor: pointer;
+    user-select: none;
+    transition: .2s;
+}
+
+.select-items div {
+    font-size: var(--content);
+    padding: 5px 10px;
+}
+
+/*style items (options):*/
+.select-items {
+    top: 110%;
+    left: 0;
+    right: 0;
+
+    position: absolute;
+    background-color: var(--trans-white);
+    backdrop-filter: blur(10px);
+    padding: 15px 15px;
+    border-radius: 10px;
+
+    z-index: 99;
+    color: var(--black);
+    box-shadow: var(--box-shadow);
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.select-items div:hover {
+    color: var(--main)
+}
+
+
+.select-hide {
+    display: none;
+}
+
+.title {
+    font-size: var(--header);
+}
+
+.label {
+    font-size: var(--small-label);
+}
+
+.content {
+    font-size: var(--content);
+}
+
+.big-label {
+    font-size: var(--label);
+}
+
+.dashboard {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.box-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 30px 30px;
+    width: 100%;
+    height: auto;
+
+    background-color: var(--white);
+
+    box-shadow: var(--box-shadow);
+    border-radius: 5px;
+    color: var(--black);
+
+}
+
+.content-container .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px
+}

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/advance-data.css" />
+    <title>Advance Data</title>
+  </head>
+  <body>
+    <nav class="header">
+      <div class="mobile">
+        <div class="hamburger-menu"><div class="bar"></div></div>
+        <div class="logo">
+          <a href="../index.html">Project Studio</a>
+        </div>
+      </div>
+      <div class="mobile-nav hide">
+        <ul>
+          <div class="top-nav">
+            <li><a href="*">About</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="*">Contribute</a></li>
+            <li>
+              <div class="dropdown">
+                <span class="dropbtn">
+                  Data Analytics
+                  <span class="material-icon">expand_more</span>
+                </span>
+                <div class="dropdown-content">
+                  <a href="data-overview.html">Data Overview</a>
+                  <a href="advance-data-overview.html">Advance Data Analyst</a>
+                </div>
+              </div>
+            </li>
+          </div>
+
+          <div class="bottom-nav">
+            <li>
+              <a href="login.html"
+                ><span>Trn H.Linh</span>
+                <span class="material-icon">person</span>
+              </a>
+            </li>
+            <li>
+              <a href="*"
+                ><span>Setting</span>
+                <span class="material-icon">settings</span></a
+              >
+            </li>
+          </div>
+        </ul>
+      </div>
+    </nav>
+
+    <section class="first">
+      <div class="wrap">
+        <!--Search bar-->
+        <form class="search-bar" action="/World" method="post">
+          <div class="input-container">
+            <div class="custom-select min-max-avg">
+              <select>
+                <option value="country">Country</option>
+                <option value="country">Country</option>
+                <option value="city">City</option>
+                <option value="state">State</option>
+              </select>
+            </div>
+            <div class="year-input-container country-name-input">
+              <div class="input-name">Region Name</div>
+              <input
+                type="text"
+                id="region-input"
+                class="input-box"
+                placeholder="User Input"
+              />
+            </div>
+            <div class="year-input-container">
+              <div class="input-name">Start Year</div>
+              <input
+                type="text"
+                id="starting-year-input"
+                class="input-box"
+                placeholder="User Input"
+              />
+            </div>
+            <div class="year-input-container">
+              <div class="input-name">Time Period</div>
+
+              <input
+                type="text"
+                id="period-year-input"
+                class="input-box"
+                placeholder="User Input"
+              />
+            </div>
+          </div>
+          <div class="submit-reset-btn-container">
+            <button class="button" id="submit">Submit</button>
+            <button class="button" id="reset">Reset</button>
+          </div>
+        </form>
+
+        <div class="dashboard">
+          <div class="dashboard-left">
+            <div class="dashboard-left-first-row">
+              <div class="info-box">
+                <div class="box-container">
+                  <div id="region-name" class="title">World</div>
+                  <div class="content-container">
+                    <div class="container">
+                      <div class="label">Avg Temperature</div>
+                      <span id="avg-temper" class="content">207</span>
+                    </div>
+                    <div class="container">
+                      <div class="label">Avg Population</div>
+                      <span id="avg-popu" class="content">WLD</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="box-container">
+                  <div id="starting-year" class="title">1910</div>
+                  <div class="content-container">
+                    <div class="container">
+                      <div class="label">Population</div>
+                      <span id="starting-year-population" class="content"
+                        >5.293.517.142</span
+                      >
+                    </div>
+                    <div class="container">
+                      <div class="label">Temperature</div>
+                      <span id="starting-year-temperature" class="content"
+                        >9.234°C</span
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <div class="box-container">
+                  <div id="ending-year" class="title">2015</div>
+                  <div class="content-container">
+                    <div class="container">
+                      <div class="label">Population</div>
+                      <span id="ending-year-population" class="content"
+                        >5.293.517.142</span
+                      >
+                    </div>
+                    <div class="container">
+                      <div class="label">Temperature</div>
+                      <span id="ending-year-temperature" class="content"
+                        >9.234°C</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="compare-container"></div>
+            </div>
+          </div>
+          <div class="dashboard-right"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="wrap">
+        <div class="footer-section-container">
+          <div class="small-header">About</div>
+          <a href="#" class="linked">About Us</a
+          ><a href="#" class="linked">Contribute</a>
+        </div>
+        <div class="footer-section-container">
+          <div class="small-header">Database</div>
+          <a href="#" class="linked">Temperature Data</a
+          ><a href="#" class="linked">Population Data</a>
+        </div>
+        <div class="footer-section-container">
+          <div class="small-header">Help and FAQs</div>
+          <a href="#" class="linked">How to use</a
+          ><a href="#" class="linked">Credit</a>
+        </div>
+        <div class="footer-section-container">
+          <div class="small-header">Contact Us</div>
+          <div class="social-linked-container">
+            <a href="#" class="facebook social-linked"
+              ><ion-icon name="logo-facebook"></ion-icon
+            ></a>
+            <a href="#" class="instagram social-linked"
+              ><ion-icon name="logo-instagram"></ion-icon>
+            </a>
+            <a href="#" class="twitter social-linked"
+              ><ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="../js/script.js"></script>
+  </body>
+</html>

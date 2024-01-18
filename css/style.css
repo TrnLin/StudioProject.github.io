@@ -288,8 +288,8 @@ section .button {
 .radiant-gradient-1,
 .radiant-gradient-2 {
 
-    width: 3019.416px;
-    height: 698.884px;
+    width: 100vw;
+    height: 30vw;
     border-radius: 3319.416px;
     display: block;
 
@@ -300,24 +300,24 @@ section .button {
 .radiant-gradient-1 {
     transform: rotate(45deg);
     flex-shrink: 0;
-    background: radial-gradient(50% 50% at 50% 50%, var(--ascent) 0%, rgba(217, 217, 217, 0.00) 100%);
+    background: radial-gradient(50% 50% at 50% 50%, var(--ascent) 0%, rgba(228, 207, 153, 0.51) 50%, rgba(217, 217, 217, 0.00) 100%);
 
-    left: -110%;
-    top: 20%
+    left: -55%;
+    top: 70%;
 }
 
 .radiant-gradient-2 {
     transform: rotate(-45deg);
     flex-shrink: 0;
-    background: radial-gradient(50% 50% at 50% 50%, var(--main) 0%, rgba(217, 217, 217, 0.00) 100%);
+    background: radial-gradient(50% 50% at 50% 50%, var(--main) 0%, rgba(228, 207, 153, 0.51) 50%, rgba(217, 217, 217, 0.00) 100%);
 
-    left: -110%;
-    top: 200%
+    left: -55%;
+    top: 170%
 }
 
 .radiant-gradient-3 {
-    width: 2450.416px;
-    height: 875.849px;
+    width: 100vw;
+    height: 40vw;
     transform: rotate(-35deg);
 
     position: absolute;
@@ -325,8 +325,8 @@ section .button {
     border-radius: 3319.416px;
     background: radial-gradient(48.12% 48.11% at 49.74% 51.89%, var(--ascent) 0%, rgba(228, 207, 153, 0.51) 56.01%, rgba(217, 217, 217, 0.00) 100%);
 
-    left: -80%;
-    top: 250%
+    left: -60%;
+    top: 260%
 }
 
 .radiant-gradient-4 {
