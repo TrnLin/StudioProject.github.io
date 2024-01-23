@@ -116,8 +116,7 @@ section {
     right: 0;
 
     position: absolute;
-    background-color: var(--trans-white);
-    backdrop-filter: blur(10px);
+    background-color: var(--white);
     padding: 15px 15px;
     border-radius: 10px;
 
@@ -131,7 +130,7 @@ section {
 }
 
 .select-items div:hover {
-    color: var(--main)
+    color: var(--main);
 }
 
 /*hide the items when the select box is closed:*/
@@ -244,7 +243,6 @@ section {
     height: auto;
 
     background-color: var(--white);
-
     box-shadow: var(--box-shadow);
     border-radius: 5px;
     color: var(--black);
@@ -257,6 +255,10 @@ section {
     justify-content: space-between;
     align-items: center;
     gap: 10px
+}
+
+#region-name {
+    width: max-content;
 }
 
 .title {
@@ -285,7 +287,7 @@ section {
 
 /*Available country*/
 .avai-container {
-    width: max-content;
+    width: 100%;
     height: 400px;
 }
 
@@ -334,32 +336,37 @@ section {
 
 table {
     border-collapse: collapse;
-
 }
 
-#available-country th:nth-child(1),
-#available-country th:nth-child(2) {
+table tbody tr:nth-child(odd) {
+    background-color: rgb(241, 241, 241);
+}
+
+.available-country th:nth-child(1),
+.available-country th:nth-child(2) {
     text-align: left;
 }
 
-#available-country th:nth-child(3) {
+.available-country th:nth-child(3) {
     text-align: center;
 }
 
 
-#available-country td:nth-child(1),
-#available-country td:nth-child(2) {
+.available-country td:nth-child(1),
+.available-country td:nth-child(2) {
     padding: 2px 5vw 2px 0;
 }
 
-#available-country td:nth-child(3) {
+.available-country td:nth-child(3) {
     padding: 2px 20px 2px;
 }
+
+
 
 /*Additional info*/
 
 .add-info-container {
-    width: max-content;
+    width: 50%;
     gap: 15px;
 }
 
@@ -381,7 +388,7 @@ table {
 
 /*City and State*/
 .city-state-container {
-    width: max-content;
+    width: 100%;
     height: 400px;
 }
 
@@ -404,19 +411,28 @@ table {
     right: calc(0px);
 }
 
-#state-city-ranking th:nth-child(1) {
-    padding: 0px 5vw 0px 0px;
-
-}
-
-#state-city-ranking th:nth-child(2),
-#state-city-ranking td:nth-child(even) {
-    padding: 0px 20px 0px 0px;
-
-}
 
 #state-city-ranking tr {
     height: 20px;
+}
+
+.city-state-container tr .label {
+    text-align: left;
+
+
+}
+
+.city-state-container tr .label:nth-child(1) {
+    width: 50%;
+}
+
+.city-state-container tr .label:nth-child(2) {
+    padding: 0 4vw 0 0;
+}
+
+
+.city-state-container table {
+    width: 100%;
 }
 
 #state-city-ranking td:nth-child(even) {
@@ -424,11 +440,38 @@ table {
 
 }
 
+
 /*World option trigger*/
-.country-name-input,
 .city-state-container,
-.avai-container {
+.avai-container,
+#country-search-bar,
+.add-info-container {
     display: none;
+}
+
+#available-country-popu-desc {
+    display: block;
+}
+
+.alert {
+    display: none;
+    align-items: center;
+    gap: 10px;
+
+    background-color: var(--error);
+    color: var(--white);
+    border-radius: 10px;
+    width: max-content;
+    padding: 15px 20px;
+
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.alert .material-icon {
+    color: var(--white);
 }
 
 @media (hover: hover) {
