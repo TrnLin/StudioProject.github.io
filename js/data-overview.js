@@ -110,10 +110,10 @@ new Chart(ctx2, {
 });
 
 //Country-World
+const select1 = document.getElementsByClassName("select-selected")[0];
 
-document
-  .getElementsByClassName("select-selected")[0]
-  .setAttribute("onclick", "change()");
+select1.setAttribute("onclick", "change()");
+
 var worldCountryOption = document.getElementById("world-country-option").value;
 const stateCityCard = document.querySelector(".city-state-container");
 const availCountry = document.querySelector(".avai-container");
