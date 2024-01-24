@@ -229,24 +229,41 @@ section {
 .dashboard {
     margin-top: 15px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 15px;
 }
-
+.dashboard-right {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
 .dashboard-left {
     display: flex;
     flex-direction: column;
-    gap: 15px
+    gap: 15px;
 }
 
-.info-box {
+.info-box,
+.dashboard-left-first-row {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     gap: 15px;
 }
 
+.dashboard-left-first-row{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+}
+
 .box-container,
-.region-filter-container {
+.region-filter-container,
+.similarity-container,
+.timeline-container,
+.graph-container,
+.compare-container {
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -274,7 +291,6 @@ section {
 
 /*Country filter*/
 .region-filter-container {
-    width: max-content;
     height: 450px;
 }
 
@@ -296,8 +312,7 @@ section {
 .from-container,
 .to-container {
     gap: 5px;
-    flex-direction: column;
-    align-items: flex-start;
+
 }
 
 .from-container input,
@@ -316,4 +331,44 @@ section {
 
 .table-header {
     text-align: left;
+}
+
+/*Similarity card*/
+
+.similarity-container{
+
+    height: 450px;
+}
+
+.num-sim-input-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.num-sim-input-content{
+   width: max-content;
+   
+}
+.num-sim-input-container input{
+    width: 100%;
+}
+
+/*table*/
+
+.graph-container{
+    width: 100%;
+    height: 80vh;
+}
+
+#main-graph{
+    width: 100%;
+    height: 100%;
+}
+
+/*different in average*/
+
+.compare-container{
+    width: max-content;
+    
 }
