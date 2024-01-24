@@ -352,6 +352,10 @@ a {
         background-color: var(--second);
     }
 
+    .top-nav li:nth-child(3) a:hover {
+        background-color: var(--ascent);
+    }
+
     .dropdown-content a:nth-child(1):hover {
         background-color: var(--ascent);
     }
