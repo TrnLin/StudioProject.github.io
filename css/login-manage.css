@@ -225,12 +225,10 @@ section {
     width: 100%;
     outline: none;
     font-size: 2em;
-    color: var(--white);
-}
-
-.search-bar:focus {
     color: var(--black);
 }
+
+
 
 #country-search {
     background-color: transparent;

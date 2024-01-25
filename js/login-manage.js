@@ -29,8 +29,19 @@ let weather = {
           description[i + 1].toUpperCase() +
           description.slice(i + 2);
       }
+
+      if (!description[i] == " ") {
+        var newSesc2 =
+          description[0].toUpperCase() + description.slice(1, i + 1);
+      }
     }
 
+    if (newDesc == undefined) {
+      var newDesc = newSesc2;
+    }
+
+    console.log(description);
+    console.log(newDesc);
     //display data in to page
     document.querySelector(".icon").src =
       "https://openweathermap.org/img/wn/" + icon + "@2x.png";
