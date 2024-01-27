@@ -639,3 +639,17 @@ section .button {
     }
 
 }
+
+@media (max-width: 420px) {
+    :root {
+        --hero: 2rem;
+        --header: 1.5rem;
+        --small-header: 1rem;
+        --label: 1.2rem;
+        --small-label: 1.25rem;
+        --content: .75rem;
+        --small-content: .75rem;
+        --bold: 700;
+    }
+
+}
