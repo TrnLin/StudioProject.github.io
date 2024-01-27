@@ -503,6 +503,11 @@ section .button {
 }
 
 @media (max-width: 450px) {
+    *:not(.bar) {
+        overflow-y: hidden;
+        overflow: auto;
+    }
+
     :root {
         --hero: 2.25rem;
         --header: 1.5rem;
@@ -525,6 +530,7 @@ section .button {
         grid-template-rows: repeat(3, 1fr);
         justify-items: center;
         align-items: center;
+        overflow: hidden;
 
     }
 
@@ -591,6 +597,7 @@ section .button {
         min-height: 90lvh;
         display: flex;
         align-items: center;
+        overflow: hidden;
     }
 
     .third {
@@ -652,4 +659,22 @@ section .button {
         --bold: 700;
     }
 
+}
+
+@media (max-width: 375px) {
+    :root {
+        --hero: 1.8rem;
+        --header: 1.5rem;
+        --small-header: .8rem;
+        --label: 1rem;
+        --small-label: 1.25rem;
+        --content: .75rem;
+        --small-content: .75rem;
+        --bold: 700;
+    }
+
+    .grid-container {
+        gap: 20px;
+        overflow: hidden;
+    }
 }
