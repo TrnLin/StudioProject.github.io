@@ -147,11 +147,12 @@ if (screenWidth > 1300) {
     opacity: 1,
   });
 }
-if (screenWidth <= 1300) {
+
+if (screenWidth < 1300 && screenWidth > 460) {
   let firstCard = gsap.timeline({
     scrollTrigger: {
       trigger: ".first-card",
-      start: "55% center",
+      start: "65% center",
       end: "140% center",
       scrub: true,
       markers: false,
@@ -166,7 +167,7 @@ if (screenWidth <= 1300) {
   let firstImgCard = gsap.timeline({
     scrollTrigger: {
       trigger: ".first-card-img",
-      start: "55% center",
+      start: "65% center",
       end: "140% center",
       scrub: true,
       markers: false,
@@ -224,7 +225,7 @@ if (screenWidth <= 1300) {
 
   let thirdImgCard = gsap.timeline({
     scrollTrigger: {
-      trigger: ".third-card-img",
+      trigger: ".third-card-img.second",
       start: "75% center",
       end: "140% center",
       scrub: true,
@@ -232,7 +233,7 @@ if (screenWidth <= 1300) {
     },
   });
 
-  thirdImgCard.to(".third-card-img", {
+  thirdImgCard.to(".third-card-img.second", {
     y: -400,
   });
 
@@ -295,26 +296,26 @@ if (screenWidth <= 1300) {
   });
 }
 
-if (screenWidth <= 450) {
+if (screenWidth <= 460) {
   let firstCard = gsap.timeline({
     scrollTrigger: {
       trigger: ".first-card",
-      start: "100%% center",
-      end: "140% center",
+      start: "100% center",
+      end: "170% center",
       scrub: true,
-      markers: false,
+      markers: true,
     },
   });
 
   firstCard.to(".first-card", {
-    y: -400,
+    y: -300,
     opacity: 0,
   });
 
   let firstImgCard = gsap.timeline({
     scrollTrigger: {
       trigger: ".first-card-img",
-      start: "55% center",
+      start: "65% center",
       end: "100% center",
       scrub: true,
       markers: false,
@@ -322,14 +323,14 @@ if (screenWidth <= 450) {
   });
 
   firstImgCard.to(".first-card-img", {
-    y: -700,
+    y: -300,
     opacity: 0,
   });
 
   let secondCard = gsap.timeline({
     scrollTrigger: {
       trigger: ".second-card",
-      start: "85% center",
+      start: "100% center",
       end: "140% center",
       scrub: true,
       markers: false,
@@ -344,7 +345,7 @@ if (screenWidth <= 450) {
   let secondImgCard = gsap.timeline({
     scrollTrigger: {
       trigger: ".second-card-img",
-      start: "40% center",
+      start: "65% center",
       end: "120% center",
       scrub: true,
       markers: false,
@@ -352,7 +353,7 @@ if (screenWidth <= 450) {
   });
 
   secondImgCard.to(".second-card-img", {
-    y: -700,
+    y: -300,
     opacity: 0,
   });
 

@@ -481,3 +481,28 @@ table tbody tr:nth-child(odd) {
         background-color: var(--black);
     }
 }
+
+
+@media (max-width: 1450px) {
+
+    :root {
+        --hero: 6.25rem;
+        --header: 2.25rem;
+        --small-header: 1.5rem;
+        --label: 1.875rem;
+        --small-label: 1.25rem;
+        --content: 1.125rem;
+        --small-content: 1rem;
+    }
+
+}
+
+@media (max-width: 1300px) {}
+
+@media (max-width: 1030px) {}
+
+@media (max-width: 450px) {}
+
+@media (max-width: 420px) {}
+
+@media (max-width: 375px) {}
