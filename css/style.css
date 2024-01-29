@@ -391,6 +391,8 @@ section .button {
 
 /*responsive*/
 
+
+/*laptop*/
 @media (max-width: 1450px) {
 
     :root {
@@ -502,6 +504,7 @@ section .button {
     }
 }
 
+/*mobile*/
 @media (max-width: 450px) {
     *:not(.bar) {
         overflow-y: hidden;
@@ -658,7 +661,6 @@ section .button {
         --small-content: .75rem;
         --bold: 700;
     }
-
 }
 
 @media (max-width: 375px) {

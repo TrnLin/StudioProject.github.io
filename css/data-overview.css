@@ -487,17 +487,63 @@ table tbody tr:nth-child(odd) {
 
     :root {
         --hero: 6.25rem;
-        --header: 2.25rem;
+        --header: 2rem;
         --small-header: 1.5rem;
-        --label: 1.875rem;
-        --small-label: 1.25rem;
-        --content: 1.125rem;
-        --small-content: 1rem;
+        --label: 1.7rem;
+        --small-label: 1rem;
+        --content: 1rem;
+        --small-content: .8rem;
+    }
+
+    .select-selected {
+        color: var(--black);
+        font-size: calc(var(--small-content) * 3.5);
+    }
+
+    .select-items div {
+        font-size: var(--label);
+
+    }
+
+    .box-container,
+    .table-container,
+    .avai-container,
+    .add-info-container,
+    .city-state-container {
+        padding: 20px 20px;
+    }
+
+    .search-bar {
+        padding: 10px 15px;
+    }
+
+    .input-box {
+        padding: 7px 10px;
+        width: 150px;
+    }
+
+    .select-selected:after {
+        position: absolute;
+        content: "expand_more";
+        font-family: 'Material Icons';
+        right: calc(0px - 35px);
+        transition: .2s;
+    }
+
+    .city-state-container,
+    .avai-container {
+        height: 350px;
+
     }
 
 }
 
-@media (max-width: 1300px) {}
+@media (max-width: 1300px) {
+    canvas {
+        width: 100%;
+        height: 20vh;
+    }
+}
 
 @media (max-width: 1030px) {}
 

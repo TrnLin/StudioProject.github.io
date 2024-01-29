@@ -1,7 +1,7 @@
 const ctx4 = document.getElementById("main-graph");
 
 new Chart(ctx4, {
-  type: "line",
+  type: "bar",
   data: {
     labels: [
       "1991",
